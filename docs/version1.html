@@ -4,18 +4,26 @@
 function fibonacci (number) {
      //if number is 1 or 2  just return 1
      //otherwise return sum of fibonacci of previous two numbers
+     if (number ==2 or number ==1)
+          return 1;
+    }else{
+        return fibonacci(number-1)+fibonacci(number -2);
      }
 
 function compute_and_display () {
      // get the value from the input
      //result = fibonacci(input)
      //display result on the webpage
+    fibo_result=fibonacci(document.getElementById("number_entered").value)
+    document.getElementById('output_goes_here').innerHTML=fibo_result
      }
 
 </script>
 </head>
 <body>
 <!-- USER INPUTS A NUMBER -->
+    Enter a name:<br>
+    <input type="number" id="number_entered" max="50" onchange="compute_and_display()><br>
 
 <!--BUTTON THAT RUNS "compute_and_display()" -->
 
